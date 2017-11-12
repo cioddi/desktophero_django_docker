@@ -1,0 +1,3 @@
+[submodule "desktophero_django"]
+	path = desktophero_django
+	url = https://github.com/stockto2/desktophero_django.git

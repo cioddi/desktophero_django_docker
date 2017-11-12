@@ -11,6 +11,10 @@ services:
       - ./django/beta1.txt:/code/desktophero_django/beta1.txt
       - ./django/beta2.txt:/code/desktophero_django/beta2.txt
       - ./django/db.sqlite3:/code/db.sqlite3
+      - ./django/settings.py:/code/desktophero_django/settings.py # try to avoid things like this in the future mybe by using env variables
+      - ./django/editor.html:/code/editor/templates/editor.html # try to avoid things like this in the future mybe by using env variables
+      - ./django/asset_pane.html:/code/editor/templates/asset_pane.html # try to avoid things like this in the future mybe by using env variables
+      - ./django/views.py:/code/editor/views.py # try to avoid things like this in the future mybe by using env variables
     ports:
       - "8701:8000"
 
