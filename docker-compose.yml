@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  web:
+    build: ./django
+    command: bash -c "python manage.py migrate && python3 manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ./desktophero_django:/code
+      - ./s3_data:/code/filestorage
+      - ./django/secrets.txt:/code/desktophero_django/secrets.txt
+      - ./django/beta1.txt:/code/desktophero_django/beta1.txt
+      - ./django/beta2.txt:/code/desktophero_django/beta2.txt
+      - ./django/db.sqlite3:/code/db.sqlite3
+    ports:
+      - "8701:8000"
+

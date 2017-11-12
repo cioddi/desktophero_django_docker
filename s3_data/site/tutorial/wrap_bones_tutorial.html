@@ -1,0 +1,70 @@
+<title>DesktopHero: Wrapping Custom Assets</title>
+<h1>DesktopHero Tutorial: Wrapping custom assets around existing bones</h1>
+
+<h2>Step 1: Setup</h2>
+
+	You will need Blender to export assets for DesktopHero, so install it if you don't already have it.
+
+	<h3>Add exporter plugin to Blender</h3>
+	We have modified the Three.js exporter for DesktopHero. Download the plugin <a href="https://s3-us-west-1.amazonaws.com/desktophero/site/files/desktophero_io_three.zip">here</a>.
+	<br><br>
+	Unzip the io_three folder, and put it in your Blender installation directory under scripts/addons.<br>
+	<img src="https://s3-us-west-1.amazonaws.com/desktophero/site/tutorial/tutorial_wrap_bones_01.png">
+	<br><br>
+	Once the plugin is in the right place, you will need to enable the plugin. Restart Blender and go to File/User Preferences.
+	<img style="width: 90%" src="https://s3-us-west-1.amazonaws.com/desktophero/site/tutorial/tutorial_wrap_bones_02.png">
+	<br><br>
+	Go to the Add-ons tab. In the search bar, type "three" and the plugin named "Import-Export: Three.js Format" should appear. Click the checkbox to the left of the plugin name to enable it. Click "Save User Settings" at the bottom left and exit the window.
+	<img src="https://s3-us-west-1.amazonaws.com/desktophero/site/tutorial/tutorial_wrap_bones_03.png">
+	<br><br>
+	If everything worked, you should now have a new exporter under File/Export called "Three.js (.json)".
+	<img style="width: 90%" src="https://s3-us-west-1.amazonaws.com/desktophero/site/tutorial/tutorial_wrap_bones_04.png">
+
+	<h3>Download base Blender file</h3>
+	There is a Blender file containing the bone structures that DesktopHero uses. Download it  <a href="https://s3-us-west-1.amazonaws.com/desktophero/site/files/desktopherobones.blend">here</a>.
+	<br>
+<h2>Step 2: Create a DesktopHero asset</h2>
+	Open the base Blender file in Blender.
+	<img style="width: 90%" src="https://s3-us-west-1.amazonaws.com/desktophero/site/tutorial/tutorial_wrap_bones_06.png">
+	<br><br>
+	On the right you can see the different bone structures (armatures) that DesktopHero uses. Underneath each armature are the meshes attached to those bones. You can export these meshes and use them as a base for other designs if you wish.
+	<br><br>
+	In this tutorial I will be creating a modified right arm mesh. I hid the other armatures/meshes and made the right arm armature and mesh visible.
+	<img style="width: 90%" src="https://s3-us-west-1.amazonaws.com/desktophero/site/tutorial/tutorial_wrap_bones_07.png">
+	<br><br>
+	Import the new arm. (I created mine in a separate program.)
+	<img style="width: 90%" src="https://s3-us-west-1.amazonaws.com/desktophero/site/tutorial/tutorial_wrap_bones_09.png">
+	<br><br>
+	Move the mesh so that it fits correctly over the bone armature. I hid the default right arm mesh to be able to see mine better.
+	<img style="width: 90%" src="https://s3-us-west-1.amazonaws.com/desktophero/site/tutorial/tutorial_wrap_bones_10.png">
+	<br><br>
+	Apply the object's location. The origin point in Blender (0, 0, 0) will be where your object attaches when it attaches to other bone groups.
+	<img style="width: 90%" src="https://s3-us-west-1.amazonaws.com/desktophero/site/tutorial/tutorial_wrap_bones_11.png">
+	<br><br>
+	On the right menu, click and drag your mesh asset over the armature to set the armature as its parent.
+	<img style="width: 90%" src="https://s3-us-west-1.amazonaws.com/desktophero/site/tutorial/tutorial_wrap_bones_12.png">
+	<br><br>
+	You can weight it how you like, I choose automatic weights here.
+	<img style="width: 90%" src="https://s3-us-west-1.amazonaws.com/desktophero/site/tutorial/tutorial_wrap_bones_13.png">
+	<br><br>
+	If you know how to weight paint to choose how much each vertex is affected by each bone, you can do that. Usually the automatic weights are fine for me. 
+	<img style="width: 90%" src="https://s3-us-west-1.amazonaws.com/desktophero/site/tutorial/tutorial_wrap_bones_14.png">
+	<br><br>
+	Make sure the mesh follows the bones as you want it to by switching into bone pose mode and moving the bones around.
+	<img style="width: 90%" src="https://s3-us-west-1.amazonaws.com/desktophero/site/tutorial/tutorial_wrap_bones_15.png">
+	<br><br>
+	If everything works as expected, your mesh is ready to be exported. Go to File/Export and choose Three.js.
+	<img style="width: 90%" src="https://s3-us-west-1.amazonaws.com/desktophero/site/tutorial/tutorial_wrap_bones_16.png">
+	<br><br>
+	The options on the left are the correct options to use in the export. These come with the base file. Save your new mesh.
+	<img style="width: 90%" src="https://s3-us-west-1.amazonaws.com/desktophero/site/tutorial/tutorial_wrap_bones_17.png">
+	<br><br>
+<h2>Step 3: Import the asset into DesktopHero</h2>
+	Open up DesktopHero. Choose the asset you want to replace and click the "Load Mesh" button. Find your mesh and upload it.
+	<img style="width: 90%" src="https://s3-us-west-1.amazonaws.com/desktophero/site/tutorial/tutorial_wrap_bones_18.png">
+	<br><br>
+	If it loaded correctly, you should see a 'success' message.
+	<img style="width: 90%" src="https://s3-us-west-1.amazonaws.com/desktophero/site/tutorial/tutorial_wrap_bones_19.png">
+	<br><br>
+	Your mesh will appear under the 'custom' tab. You can now use it the same as any other DesktopHero mesh.
+	<img style="width: 90%" src="https://s3-us-west-1.amazonaws.com/desktophero/site/tutorial/tutorial_wrap_bones_20.png">
