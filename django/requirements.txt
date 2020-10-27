@@ -2,7 +2,7 @@ django==1.11.7
 django-storages==1.1.8
 boto==2.40.0
 chardet==2.3.0
-cryptography==1.7.1
+cryptography==3.2
 #duplicity==0.7.14
 enum34==1.1.6
 futures==3.0.5
